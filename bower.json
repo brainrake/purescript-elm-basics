@@ -1,0 +1,16 @@
+{
+  "name": "purescript-elm-basics",
+  "version": "0.1.0",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-math": "~0.1.0"
+  }
+}
