@@ -22,6 +22,8 @@ Please also see the detailed [Module Documentation](MODULES.md).
 
 * `degrees`, `radians`, `turns` are functions with type `Float -> Float`
 
+* `clamp :: Float -> Float -> Float -> Float`
+
 * `<|` and `|>` are provided and synonymous with `$` and `#`
 
 
@@ -64,6 +66,6 @@ The other types and values from Elm's `Basics` all have Purescript analogues and
 
 ### TODO
 
-* `//`, `rem`, `%`, `clamp`, `logBase`, `truncate`
+* `//`, `rem`, `%`, `logBase`, `truncate`
 
 * `toPolar`, `fromPolar`

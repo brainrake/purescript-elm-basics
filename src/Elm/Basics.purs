@@ -3,6 +3,7 @@ module Elm.Basics
     , (<|), (|>)
     , degrees, radians, turns
     , toFloat
+    , clamp
     ) where
 
 import qualified Math as Math
@@ -21,6 +22,9 @@ turns t = 2 * Math.pi * t
 
 toFloat :: Int -> Float
 toFloat = id
+
+clamp :: Float -> Float -> Float -> Float
+clamp lo hi x = Math.min hi $ Math.max lo x
 
 (|>) :: forall a b. a -> (a -> b) -> b
 (|>) x f = f x

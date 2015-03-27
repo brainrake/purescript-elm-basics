@@ -44,6 +44,13 @@ toFloat :: Int -> Float
 ```
 
 
+#### `clamp`
+
+``` purescript
+clamp :: Float -> Float -> Float
+```
+
+
 #### `(|>)`
 
 ``` purescript
