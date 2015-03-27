@@ -22,12 +22,12 @@ Please also see the detailed [Module Documentation](MODULES.md).
 
 * `degrees`, `radians`, `turns` are functions with type `Float -> Float`
 
-* `<|` and `|>` are provided and synonymous with `$` and `#` 
+* `<|` and `|>` are provided and synonymous with `$` and `#`
 
 
 ### Not Included
 
-The other types and values from Elm's `Basics` all have Purescript analogues and can be `import`ed from their respective modules, so they were not included. Here's a short migration guide: 
+The other types and values from Elm's `Basics` all have Purescript analogues and can be `import`ed from their respective modules, so they were not included. Here's a short migration guide:
 
 
 #### `Prelude`
@@ -42,6 +42,8 @@ The other types and values from Elm's `Basics` all have Purescript analogues and
 
 * `Order` becomes `Ordering` and is used with the `compare` method of the `Ord` typeclass from [Prelude](https://github.com/purescript/purescript/tree/master/prelude#ord)
 
+* `xor` becomes `.^.` from the `Bits` type class, of which there is an instance for `Num`
+
 
 #### `Math`
 
@@ -55,10 +57,13 @@ The other types and values from Elm's `Basics` all have Purescript analogues and
 * `fst`, `snd`, `curry`, `uncurry` are in `Data.Tuple` from [purescript-tuples](https://github.com/purescript/purescript-tuples)
 
 
+#### `Global`
+
+* `isNaN` and `isFinite` (negated `isInfinite`) available from [purescript-globals](https://github.com/purescript/purescript-globals)
+
+
 ### TODO
 
-* `xor`, `//`, `rem`, `%`, `clamp`, `logBase`, `truncate`
-
-* `isNaN`, `isInfinite`
+* `//`, `rem`, `%`, `clamp`, `logBase`, `truncate`
 
 * `toPolar`, `fromPolar`
