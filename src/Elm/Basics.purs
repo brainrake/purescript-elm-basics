@@ -1,30 +1,23 @@
 module Elm.Basics
-    ( Int(..), Float(..)
-    , (<|), (|>)
+    ( (<|), (|>)
     , degrees, radians, turns
-    , toFloat
     , clamp
     ) where
 
 import qualified Math as Math
+import qualified Prelude as Prelude
 
-type Int = Number
-type Float = Number
-
-radians :: Float -> Float
+radians :: Number -> Number
 radians t = t
 
-degrees :: Float -> Float
-degrees d = d * Math.pi / 180
+degrees :: Number -> Number
+degrees d = d Prelude.* Math.pi Prelude./ 180.0
 
-turns :: Float -> Float
-turns t = 2 * Math.pi * t
+turns :: Number -> Number
+turns t = 2.0 Prelude.* Math.pi Prelude.* t
 
-toFloat :: Int -> Float
-toFloat = id
-
-clamp :: Float -> Float -> Float -> Float
-clamp lo hi x = Math.min hi $ Math.max lo x
+clamp :: Number -> Number -> Number -> Number
+clamp lo hi x = Math.min hi (Math.max lo x)
 
 (|>) :: forall a b. a -> (a -> b) -> b
 (|>) x f = f x

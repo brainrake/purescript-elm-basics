@@ -16,13 +16,11 @@ This library is intended to help port [Elm](http://elm-lang.org/) libraries and 
 
 Please also see the detailed [Module Documentation](MODULES.md).
 
-* The `Int` and `Float` type synonyms are defined for Purescript's (JavaScript's) `Number`
+* The built-in type `Number` is used instead of `Float`
 
-* `toFloat :: Int -> Float` is a noop
+* `degrees`, `radians`, `turns` are functions with type `Number -> Number`
 
-* `degrees`, `radians`, `turns` are functions with type `Float -> Float`
-
-* `clamp :: Float -> Float -> Float -> Float`
+* `clamp :: Number -> Number -> Number -> Number`
 
 * `<|` and `|>` are provided and synonymous with `$` and `#`
 
@@ -34,15 +32,15 @@ The other types and values from Elm's `Basics` all have Purescript analogues and
 
 #### `Prelude`
 
-* `==`, `/=`, `<`, `>`, `<=`, `>=`, `+`, `-`, `*`, `/`, `negate`, `not`, `&&`, `||`, `++`, `otherwise`, `flip` are imported by default, from Purescript's `Prelude`
+* `==`, `/=`, `<`, `>`, `<=`, `>=`, `+`, `-`, `*`, `/`, `negate`, `not`, `&&`, `||`, `++`, `otherwise`, `flip` can be imported from Purescript's `Prelude`
 
 *  `<<` and `>>` become  `<<<` and `>>>` from `Prelude`
 
-* `toString` is superseded by the `show` method of the `Show` typeclass from [Prelude](https://github.com/purescript/purescript/tree/master/prelude#show)
+* `toString` is superseded by the `show` method of the `Show` typeclass from [Prelude](https://github.com/purescript/purescript-prelude/blob/master/docs/Prelude.md#show)
 
 * `identity` becomes `id`, and `always` becomes `const`, from `Prelude`
 
-* `Order` becomes `Ordering` and is used with the `compare` method of the `Ord` typeclass from [Prelude](https://github.com/purescript/purescript/tree/master/prelude#ord)
+* `Order` becomes `Ordering` and is used with the `compare` method of the `Ord` typeclass from [Prelude](https://github.com/purescript/purescript-prelude/blob/master/docs/Prelude.md#ordering)
 
 * `xor` becomes `.^.` from the `Bits` type class, of which there is an instance for `Num`
 
@@ -57,6 +55,10 @@ The other types and values from Elm's `Basics` all have Purescript analogues and
 #### `Data.Tuple`
 
 * `fst`, `snd`, `curry`, `uncurry` are in `Data.Tuple` from [purescript-tuples](https://github.com/purescript/purescript-tuples)
+
+#### `Data.Int`
+
+* `toNumber` (to be used instead of `toFloat`), as well as `floor`, `ceil`, `round` and others are in `Data.Int` from [purescript-integers](https://github.com/purescript/purescript-integers)
 
 
 #### `Global`
