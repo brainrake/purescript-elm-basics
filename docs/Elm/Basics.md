@@ -1,55 +1,28 @@
-# Module Documentation
-
 ## Module Elm.Basics
-
-#### `Int`
-
-``` purescript
-type Int = Number
-```
-
-
-#### `Float`
-
-``` purescript
-type Float = Number
-```
-
 
 #### `radians`
 
 ``` purescript
-radians :: Float -> Float
+radians :: Number -> Number
 ```
-
 
 #### `degrees`
 
 ``` purescript
-degrees :: Float -> Float
+degrees :: Number -> Number
 ```
-
 
 #### `turns`
 
 ``` purescript
-turns :: Float -> Float
+turns :: Number -> Number
 ```
-
-
-#### `toFloat`
-
-``` purescript
-toFloat :: Int -> Float
-```
-
 
 #### `clamp`
 
 ``` purescript
-clamp :: Float -> Float -> Float
+clamp :: Number -> Number -> Number -> Number
 ```
-
 
 #### `(|>)`
 
@@ -57,6 +30,7 @@ clamp :: Float -> Float -> Float
 (|>) :: forall a b. a -> (a -> b) -> b
 ```
 
+_left-associative / precedence 0_
 
 #### `(<|)`
 
@@ -64,6 +38,6 @@ clamp :: Float -> Float -> Float
 (<|) :: forall a b. (a -> b) -> a -> b
 ```
 
-
+_right-associative / precedence 0_
 
 

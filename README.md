@@ -14,7 +14,7 @@ This library is intended to help port [Elm](http://elm-lang.org/) libraries and 
 
 ### `Elm.Basics` Module Contents
 
-Please also see the detailed [Module Documentation](MODULES.md).
+Please also see the detailed [Module Documentation](docs/Elm/Basics.md).
 
 * The built-in type `Number` is used instead of `Float`
 
